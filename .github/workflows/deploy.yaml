@@ -23,9 +23,10 @@ jobs:
 
       # TODO 01 - Add a step to run tests
       - name: Run tests
-        run: #TODO
+        run: go test ./...
 
   compile:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
